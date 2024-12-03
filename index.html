@@ -4,27 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise Table</title>
- 
-</head>
-<style>
-          th, td {
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f5f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        h1 {
+            margin: 20px;
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 90%;
+            margin: 20px 0;
+            border-collapse: collapse;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(100%);
+            animation: floatUp 1s ease-out forwards;
+        }
+
+        th, td {
             border: 1px solid #ddd;
             padding: 12px 15px;
             text-align: center;
         }
 
         th {
-            background-color: #f4f4f4;
-            color: #333;
-            
+            background-color: #8b0000;
+            color: white;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         td {
             background-color: #fff;
         }
+
+        tr:hover td {
+            background-color: #e8dfdf;
+        }
         
         button {
-            background-color: #4CAF50;
+            background-color: #b8860b;
             color: white;
             border: none;
             padding: 8px 12px;
@@ -34,15 +65,39 @@
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
         
-         button:hover {
-            background-color: #45a049;
+        button:hover {
+            background-color: #daa520;
             transform: scale(1.1);
         }
-</style>
-<body>
 
-    <h2>Exercise Table</h2>
-    <table border="1">
+        @keyframes floatUp {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        td a button {
+            background-color: #8b0000;
+        }
+
+        td a button:hover {
+            background-color: #641220;
+        }
+
+        .logo {
+            margin-top: 20px;
+            width: 150px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <img src="isma.png" alt="University Logo" class="logo">
+    <h1>Exercise Table</h1>
+    <table>
         <tr>
             <th>Exercise</th>
             <th>Title</th>
@@ -53,7 +108,8 @@
             <td>Form</td>
             <td><a href="https://aaronsebast.github.io/Form/" target="_blank"><button>Click here</button></a></td>
         </tr>
-         <td>2</td>
+        <tr>
+            <td>2</td>
             <td>CSS-Animation</td>
             <td><a href="https://aaronsebast.github.io/CSS-Animation/" target="_blank"><button>Click here</button></a></td>
         </tr>
@@ -77,12 +133,12 @@
             <td>Operators</td>
             <td><a href="https://aaronsebast.github.io/Operators/" target="_blank"><button>Click here</button></a></td>
         </tr>
-         <tr>
+        <tr>
             <td>7</td>
             <td>Iframes</td>
             <td><a href="https://aaronsebast.github.io/Iframe/" target="_blank"><button>Click here</button></a></td>
         </tr>
-          <tr>
+        <tr>
             <td>8</td>
             <td>Min vs Max Validation</td>
             <td><a href="https://aaronsebast.github.io/Min-and-Max-Validation/" target="_blank"><button>Click here</button></a></td>
@@ -95,7 +151,7 @@
         <tr>
             <td>10</td>
             <td>Arithmetic Calculator</td>
-            <td><a href=" https://aaronsebast.github.io/Arithmetic-calculator/" target="_blank"><button>Click here</button></a></td>
+            <td><a href="https://aaronsebast.github.io/Arithmetic-calculator/" target="_blank"><button>Click here</button></a></td>
         </tr>
     </table>
 </body>
