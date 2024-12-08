@@ -13,7 +13,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             overflow-y: auto;
         }
         
@@ -100,6 +100,29 @@
             text-align: right;
             font-size: 1.5em;
             color: #333;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+            }
+
+            table {
+                width: 100%;
+            }
+
+            th, td {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+
+            .header-info {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
